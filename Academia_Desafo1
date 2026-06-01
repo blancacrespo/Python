@@ -1,1 +1,78 @@
+# Desafio Python - Parte I
+# Nombre: Blanca Crespo
+# En este archivo se desarrollan ejercicios basicos de Python.
 
+# ------------------------------------------------------------
+# Ejercicio 1: Calculando el salario semanal
+# ------------------------------------------------------------
+
+print("Ejercicio 1: Calculando el salario semanal")
+
+ventas_totales = float(input("Ingrese el total de ventas del vendedor: "))
+
+salario_base = 500
+comision = ventas_totales * 0.10
+salario_total = salario_base + comision
+
+print("El salario total del vendedor es:", salario_total)
+
+
+# ------------------------------------------------------------
+# Ejercicio 2: Fruteria virtual
+# ------------------------------------------------------------
+
+print("\nEjercicio 2: Fruteria virtual")
+
+catalogo_frutas = {
+    "manzana": 1200,
+    "banana": 900,
+    "naranja": 1000,
+    "pera": 1500
+}
+
+fruta = input("Ingrese el nombre de una fruta: ").lower()
+
+if fruta in catalogo_frutas:
+    print("El precio de la", fruta, "es:", catalogo_frutas[fruta])
+else:
+    print("La fruta no se encuentra en nuestra tienda.")
+
+
+# ------------------------------------------------------------
+# Ejercicio 3: Bienvenido al casino
+# ------------------------------------------------------------
+
+print("\nEjercicio 3: Bienvenido al casino")
+
+import random
+
+dado1 = random.randint(1, 6)
+dado2 = random.randint(1, 6)
+
+suma = dado1 + dado2
+
+print("El valor del primer dado es:", dado1)
+print("El valor del segundo dado es:", dado2)
+print("La suma de ambos dados es:", suma)
+
+
+# ------------------------------------------------------------
+# Ejercicio 4: Calculadora de chocolate
+# ------------------------------------------------------------
+
+print("\nEjercicio 4: Calculadora de chocolate")
+
+limite_calorias = int(input("Ingrese su limite diario de calorias: "))
+calorias_chocolate = int(input("Ingrese las calorias de una porcion de chocolate: "))
+
+cantidad_maxima = limite_calorias // calorias_chocolate
+
+print("Puedes comer hasta", cantidad_maxima, "porciones de chocolate sin exceder tu limite diario.")
+
+
+# ------------------------------------------------------------
+# Conclusion
+# ------------------------------------------------------------
+
+print("\nConclusion")
+print("En estos ejercicios practique variables, input, print, diccionarios, condicionales, operaciones matematicas y el uso de la libreria random.")
