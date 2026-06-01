@@ -1,0 +1,113 @@
+# Desafio - Conociendo Python Parte II
+# Nombre: Blanca Crespo
+# En este archivo se desarrollan los ejercicios solicitados en la actividad.
+
+# ------------------------------------------------------------
+# Ejercicio 1: Suma de numeros pares
+# ------------------------------------------------------------
+
+print("Ejercicio 1: Suma de numeros pares")
+
+numero_1 = int(input("Ingrese el primer numero entero: "))
+numero_2 = int(input("Ingrese el segundo numero entero: "))
+
+inicio = min(numero_1, numero_2)
+fin = max(numero_1, numero_2)
+
+suma_pares = 0
+
+for numero in range(inicio, fin + 1):
+    if numero % 2 == 0:
+        suma_pares += numero
+
+print("La suma de los numeros pares entre", inicio, "y", fin, "es:", suma_pares)
+
+
+# ------------------------------------------------------------
+# Ejercicio 2: Calculadora de areas
+# ------------------------------------------------------------
+
+import math
+
+print("\nEjercicio 2: Calculadora de areas")
+print("Figuras disponibles: cuadrado, triangulo, circulo")
+
+figura = input("Ingrese la figura geometrica: ").lower()
+
+if figura == "cuadrado":
+    lado = float(input("Ingrese la medida del lado del cuadrado: "))
+    area = lado ** 2
+    print("El area del cuadrado es:", area)
+
+elif figura == "triangulo" or figura == "triángulo":
+    base = float(input("Ingrese la base del triangulo: "))
+    altura = float(input("Ingrese la altura del triangulo: "))
+    area = (base * altura) / 2
+    print("El area del triangulo es:", area)
+
+elif figura == "circulo" or figura == "círculo":
+    radio = float(input("Ingrese el radio del circulo: "))
+    area = math.pi * radio ** 2
+    print("El area del circulo es:", area)
+
+else:
+    print("La figura ingresada no es valida.")
+
+
+# ------------------------------------------------------------
+# Ejercicio 3: Adivina el numero
+# ------------------------------------------------------------
+
+import random
+
+print("\nEjercicio 3: Adivina el numero")
+
+numero_secreto = random.randint(1, 100)
+intentos = 0
+
+while True:
+    numero_usuario = int(input("Ingrese un numero entre 1 y 100: "))
+    intentos += 1
+
+    if numero_usuario < numero_secreto:
+        print("El numero secreto es mayor.")
+
+    elif numero_usuario > numero_secreto:
+        print("El numero secreto es menor.")
+
+    else:
+        print("Correcto. Adivinaste el numero.")
+        print("Cantidad de intentos:", intentos)
+        break
+
+
+# ------------------------------------------------------------
+# Ejercicio 4: Carrera de pollos
+# ------------------------------------------------------------
+
+print("\nEjercicio 4: Carrera de pollos")
+
+velocidad = float(input("Ingrese la velocidad del pollo en metros por segundo: "))
+
+distancia = 0
+segundo = 0
+
+while distancia < 100:
+    segundo += 1
+    distancia += velocidad
+
+    espacios = int(distancia / 2)
+
+    print("Segundo:", segundo, "| Distancia:", distancia, "metros")
+    print(" " * espacios + "🐥")
+
+print("El pollo llego a la meta.")
+print("Tiempo total:", segundo, "segundos")
+
+
+# ------------------------------------------------------------
+# Conclusion
+# ------------------------------------------------------------
+
+print("\nConclusion")
+print("En esta actividad practique el uso de variables, input, print, condiciones, ciclos for, ciclos while y la funcion range en Python.")
